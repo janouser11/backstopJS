@@ -1,0 +1,28 @@
+{
+  "name": "backstopjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backstop.js",
+  "dependencies": {
+    "backstopjs": "^2.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backstop_reference": "node ./node_modules/backstopjs/cli/index.js reference",
+    "backstop_test": "node ./node_modules/backstopjs/cli/index.js test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janouser11/backstopJS.git"
+  },
+  "keywords": [
+    "backstopJs"
+  ],
+  "author": "Alex Janousek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janouser11/backstopJS/issues"
+  },
+  "homepage": "https://github.com/janouser11/backstopJS#readme"
+}
