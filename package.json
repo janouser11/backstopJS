@@ -8,8 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "backstop_reference": "node ./node_modules/backstopjs/cli/index.js reference",
-    "backstop_test": "node ./node_modules/backstopjs/cli/index.js test"
+    "reference": "node ./node_modules/backstopjs/cli/index.js reference",
+    "test": "node ./node_modules/backstopjs/cli/index.js test"
   },
   "repository": {
     "type": "git",
