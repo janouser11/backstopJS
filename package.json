@@ -8,7 +8,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "backstop_reference": "node ./node_modules/backstopjs/cli/index.js reference",
     "backstop_test": "node ./node_modules/backstopjs/cli/index.js test"
   },
