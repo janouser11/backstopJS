@@ -1,0 +1,13 @@
+#IntelliJ Configs
+.idea/
+
+#Generated data
+backstop_data/bitmaps_reference/
+backstop_data/bitmaps_test/
+backstop_data/html_report/
+
+#Generated json file
+node_modules/backstopjs/capture/config.json
+
+
+npm-debug.log

@@ -44,7 +44,7 @@ var configList = [{
 //Change Environment here by changing BASE_URL
 var BASE_URL = baseUrl.qa;
 //Can be enabled to test url against base_url
-var BASE_REFERENCE_URL = baseUrl.production;
+var BASE_REFERENCE_URL = baseUrl.stage;
 
 //Selectors that are selected for every test
 // var DEFAULT_SELECTORS = ["selector1","selector2"]
