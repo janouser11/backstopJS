@@ -1,6 +1,6 @@
 /**
  * Created by Alex on 11/2/16.
- * This is the backstop.js config file for CSS regression testing for Couchbase
+ * This is the backstop.js config file for CSS regression testing for projects
  * Designed to be reusable and easy to configure
  * https://github.com/garris/BackstopJS for detailed documentation
  */
@@ -14,15 +14,32 @@ var baseUrl = {
     prod: "http://www.couchbase.com/"
 };
 
-//Example config object
-//Only need url page to test. By default a screenshot of the whole page is taken
-//Custom properties can be taken as well
-//{
-//     url: "URL_PAGE",
-//     hide: "selector",
-//     remove: "selector",
-//     selector:"selector"
-// }
+//Change testing Environment here by changing baseUrl suffix
+var BASE_URL = baseUrl.qa;
+
+//Can be enabled to test url against base_url. To enable, uncomment BASE_REFERENCE_URL variable and referenceUrl object
+//in the loopThroughUrlArray function and parameter
+//var BASE_REFERENCE_URL = baseUrl.stage;
+
+//Selectors that are selected for every test, can leave empty or add multiple selectors such as:
+// var DEFAULT_SELECTORS = ["selector1","selector2"]
+var DEFAULT_SELECTORS = ["document"];
+
+
+/**
+ *
+ * Example config object in configList
+ * Only need url page to test. By default a screenshot of the whole page is taken
+ * Custom properties can be taken as well
+        {
+           url: "URL_PAGE",                    //Target URL goes here
+           hide: "selector",                   //Selector content that is hidden
+           remove: "selector",                 //Selectors that will be removed
+           selector:"selector"                 //Additional selectors for testing for specific URL -- can have multiple
+        }
+ *
+ */
+
 
 var configList = [{
     url: "about",
@@ -41,16 +58,6 @@ var configList = [{
     url: "whats-new-in-3-0"
 }];
 
-//Change testing Environment here by changing baseUrl suffix
-var BASE_URL = baseUrl.qa;
-
-//Can be enabled to test url against base_url. To enable, uncomment BASE_REFERENCE_URL variable and referenceUrl object
-//in the loopThroughUrlArray function and parameter
-//var BASE_REFERENCE_URL = baseUrl.stage;
-
-//Selectors that are selected for every test, can leave empty or add multiple selectors such as:
-// var DEFAULT_SELECTORS = ["selector1","selector2"]
-var DEFAULT_SELECTORS = ["document"];
 
 /**
  *
@@ -121,15 +128,15 @@ function provideLogging(url,hide,remove,referenceUrl){
     console.log("Url: " + url);
     if (referenceUrl != undefined){
         console.log("Reference URL: " + referenceUrl);
-    };
+    }
     if (hide != undefined){
         console.log("Selector Hiding: " + hide);
-    };
+    }
     if (remove != undefined) {
         console.log("Selector Removing: " + remove);
-    };
+    }
     console.log("*******************\n");
-};
+}
 
 //JSON object that is being exported for Backstop
 var exporting = { "id": "prod_test",
