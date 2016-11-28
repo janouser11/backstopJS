@@ -8,18 +8,16 @@
 
 //Different base URL's based on environment
 var baseUrl = {
-    local: "http://localhost:8080/site/",
-    qa: "http://ax-qa.couchbase.com/",
-    stage: "http://ax-stage.couchbase.com/",
-    prod: "http://www.couchbase.com/"
+    acct: "http://www.unit4.acct.us.onehippo.com/",
+    prod: "http://www.unit4.com/"
 };
 
 //Change testing Environment here by changing baseUrl suffix
-var BASE_URL = baseUrl.qa;
+var BASE_URL = baseUrl.acct;
 
 //Can be enabled to test url against base_url. To enable, uncomment BASE_REFERENCE_URL variable and referenceUrl object
 //in the loopThroughUrlArray function and parameter
-//var BASE_REFERENCE_URL = baseUrl.stage;
+var BASE_REFERENCE_URL = baseUrl.prod;
 
 //Selectors that are selected for every test, can leave empty or add multiple selectors such as:
 // var DEFAULT_SELECTORS = ["selector1","selector2"]
@@ -42,20 +40,9 @@ var DEFAULT_SELECTORS = ["document"];
 
 
 var configList = [{
-    url: "about",
-    hide: "#global-content > div.generic-header",
-    remove: "#global-footer",
-    selector:"#global-header"
-},{
-    url: "nosql-resources/why-nosql",
-},{
-    url: "azure",
-},{
-    url: "become-a-partner",
-},{
-    url: "careers",
-},{
-    url: "whats-new-in-3-0"
+    url: "your-rules#why-unit4",
+    hide: "#main > div > div:nth-child(1) > div.row.homecarousel",
+    selector: ["header,#main,footer"]
 }];
 
 
@@ -101,7 +88,7 @@ function loopThroughUrlArray() {
             "label": BASE_URL + configList[prop].url,
             "url": BASE_URL + configList[prop].url,
             //reference URL can be enabled that tests url against referenceUrl
-            //"referenceUrl": BASE_REFERENCE_URL + configList[prop].url,
+            "referenceUrl": BASE_REFERENCE_URL + configList[prop].url,
             "hideSelectors": [configList[prop].hide],
             "removeSelectors": [configList[prop].remove],
             "selectors": selectors,
@@ -111,7 +98,7 @@ function loopThroughUrlArray() {
             "onBeforeScript": "onBefore.js",
             "onReadyScript": "onReady.js"
         };
-
+        console.log("selectors are: " + selectors);
 
         scenarios.push(scenario);
         selectors = [];

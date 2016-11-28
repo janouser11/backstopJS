@@ -1,5 +1,6 @@
 #IntelliJ Configs
 .idea/
+backstopJS.iml
 
 #Generated data
 backstop_data/bitmaps_reference/
