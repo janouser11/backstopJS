@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/prod_test_http__ax-qacouchbasecom_about_0_document_0_desktop.png",
-        "test": "../bitmaps_test/20161128-153403/prod_test_http__ax-qacouchbasecom_about_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20161129-133714/prod_test_http__ax-qacouchbasecom_about_0_document_0_desktop.png",
         "selector": "document",
         "fileName": "prod_test_http__ax-qacouchbasecom_about_0_document_0_desktop.png",
         "label": "http://ax-qa.couchbase.com/about",
@@ -16,7 +16,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 97
+          "analysisTime": 94
         }
       },
       "status": "pass"
@@ -24,7 +24,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/prod_test_http__ax-qacouchbasecom_about_1_global-contentdivgeneric-headerdivdiv_0_desktop.png",
-        "test": "../bitmaps_test/20161128-153403/prod_test_http__ax-qacouchbasecom_about_1_global-contentdivgeneric-headerdivdiv_0_desktop.png",
+        "test": "../bitmaps_test/20161129-133714/prod_test_http__ax-qacouchbasecom_about_1_global-contentdivgeneric-headerdivdiv_0_desktop.png",
         "selector": "#global-content > div.generic-header > div > div",
         "fileName": "prod_test_http__ax-qacouchbasecom_about_1_global-contentdivgeneric-headerdivdiv_0_desktop.png",
         "label": "http://ax-qa.couchbase.com/about",
@@ -36,7 +36,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 27
+          "analysisTime": 15
         }
       },
       "status": "pass"
@@ -44,7 +44,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/prod_test_http__ax-qacouchbasecom_about_2_global-footerdivdivullinth-child1a_0_desktop.png",
-        "test": "../bitmaps_test/20161128-153403/prod_test_http__ax-qacouchbasecom_about_2_global-footerdivdivullinth-child1a_0_desktop.png",
+        "test": "../bitmaps_test/20161129-133714/prod_test_http__ax-qacouchbasecom_about_2_global-footerdivdivullinth-child1a_0_desktop.png",
         "selector": "#global-footer > div > div > ul > li:nth-child(1) > a",
         "fileName": "prod_test_http__ax-qacouchbasecom_about_2_global-footerdivdivullinth-child1a_0_desktop.png",
         "label": "http://ax-qa.couchbase.com/about",
@@ -64,7 +64,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/prod_test_http__ax-qacouchbasecom_nosql-resources_why-nosql_0_document_0_desktop.png",
-        "test": "../bitmaps_test/20161128-153403/prod_test_http__ax-qacouchbasecom_nosql-resources_why-nosql_0_document_0_desktop.png",
+        "test": "../bitmaps_test/20161129-133714/prod_test_http__ax-qacouchbasecom_nosql-resources_why-nosql_0_document_0_desktop.png",
         "selector": "document",
         "fileName": "prod_test_http__ax-qacouchbasecom_nosql-resources_why-nosql_0_document_0_desktop.png",
         "label": "http://ax-qa.couchbase.com/nosql-resources/why-nosql",
@@ -76,7 +76,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 892
+          "analysisTime": 493
         }
       },
       "status": "pass"
@@ -84,7 +84,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/prod_test_http__ax-qacouchbasecom_azure_0_main_0_desktop.png",
-        "test": "../bitmaps_test/20161128-153403/prod_test_http__ax-qacouchbasecom_azure_0_main_0_desktop.png",
+        "test": "../bitmaps_test/20161129-133714/prod_test_http__ax-qacouchbasecom_azure_0_main_0_desktop.png",
         "selector": "main",
         "fileName": "prod_test_http__ax-qacouchbasecom_azure_0_main_0_desktop.png",
         "label": "http://ax-qa.couchbase.com/azure",
@@ -96,7 +96,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.00",
-          "analysisTime": 125
+          "analysisTime": 80
         }
       },
       "status": "pass"
