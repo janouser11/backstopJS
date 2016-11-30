@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "reference": "node ./node_modules/backstopjs/cli/index.js reference",
-    "test": "node ./node_modules/backstopjs/cli/index.js test"
+    "test": "node /node_modules/backstopjs/cli/index.js test"
   },
   "repository": {
     "type": "git",
