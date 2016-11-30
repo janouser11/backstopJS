@@ -31,31 +31,32 @@ var DEFAULT_SELECTORS = ["document"];
  * Example config object in configList
  * Only need url page to test. By default a screenshot of the whole page is taken
  * Custom properties can be taken as well
-        {
-           url: "URL_PAGE",                    //Target URL goes here
-           hide: "selector",                   //Selector content that is hidden
-           remove: "selector",                 //Selectors that will be removed
-           selector:"selector"                 //Additional selectors for testing for specific URL -- can have multiple
-        }
+ {
+    url: "URL_PAGE",                    //Target URL goes here
+    hide: "selector",                   //Selector content that is hidden
+    remove: "selector",                 //Selectors that will be removed
+    selector:"selector"                 //Additional selectors for testing for specific URL -- can have multiple
+ }
  *
  */
 
 
 var configList = [{
     url: "about",
-    hide: "#global-content > div.generic-header",
-    remove: "#global-footer",
-    selector:"#global-header"
+    hide: [
+        "#global-content > div.generic-header > div"
+    ],
+    selector:[
+        "document",
+        "#global-content > div.generic-header > div > div",
+        "#global-footer > div > div > ul > li:nth-child(1) > a"]
+
 },{
     url: "nosql-resources/why-nosql",
+    selector:"document"
 },{
     url: "azure",
-},{
-    url: "become-a-partner",
-},{
-    url: "careers",
-},{
-    url: "whats-new-in-3-0"
+    selector:"main"
 }];
 
 
@@ -89,22 +90,34 @@ console.log("****************");
 //Function to reduce redundancy and make code easier to read and manage
 //These are suggested default configs that can be overwritten by configList array
 function loopThroughUrlArray() {
+
     var scenarios = [];
-    var selectors = DEFAULT_SELECTORS;
+
     for (var prop in configList) {
 
-        //If there is another selector in configList, add it to selector array
-        if (typeof configList[prop].selector !== 'undefined') {
-            selectors.push(configList[prop].selector);
-        }
+        // // If there is another selector in configList, add it to selector array
+        // if (typeof configList[prop].selector !== 'undefined') {
+        //     selectors.push(configList[prop].selector);
+        // }
+
+        var selectorsArray = [configList[prop].selector];
+        selectorsArray.push(DEFAULT_SELECTORS);
+        selectorsArray = [].concat.apply([], selectorsArray);
+
+        var hideSelectorsArray = [configList[prop].hide];
+        hideSelectorsArray = [].concat.apply([], hideSelectorsArray);
+
+        var removeSelectorsArray = [configList[prop].remove];
+        removeSelectorsArray = [].concat.apply([], removeSelectorsArray);
+
         var scenario = {
             "label": BASE_URL + configList[prop].url,
             "url": BASE_URL + configList[prop].url,
             //reference URL can be enabled that tests url against referenceUrl
             //"referenceUrl": BASE_REFERENCE_URL + configList[prop].url,
-            "hideSelectors": [configList[prop].hide],
-            "removeSelectors": [configList[prop].remove],
-            "selectors": selectors,
+            "hideSelectors": hideSelectorsArray,
+            "removeSelectors": removeSelectorsArray,
+            "selectors":  selectorsArray,
             "readyEvent": null,
             "delay": 500,
             "misMatchThreshold": 0.1,
@@ -112,9 +125,10 @@ function loopThroughUrlArray() {
             "onReadyScript": "onReady.js"
         };
 
-
         scenarios.push(scenario);
-        selectors = [];
+        selectorsArray = [];
+        hideSelectorsArray = [];
+        removeSelectorsArray = [];
         provideLogging(BASE_URL+configList[prop].url,configList[prop].hide,
             configList[prop].remove/*,BASE_REFERENCE_URL+configList[prop].url*/);
     }
@@ -163,6 +177,7 @@ var exporting = { "id": "prod_test",
     "debug": false
 };
 
+// console.log(exporting);
 //Backstop only looks for config data in module.exports. Change export to change configs
 module.exports = exporting;
 

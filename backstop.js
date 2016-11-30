@@ -85,6 +85,11 @@ if (BASE_URL == undefined) {
 } else {
     console.log("BASE_URL is: " + BASE_URL);
 }
+
+if (DEFAULT_SELECTORS != undefined){
+    console.log("DEFAULT_SELECTORS ARE: ")
+    console.log(DEFAULT_SELECTORS)
+}
 console.log("****************");
 
 //Function to reduce redundancy and make code easier to read and manage
@@ -92,17 +97,18 @@ console.log("****************");
 function loopThroughUrlArray() {
 
     var scenarios = [];
+    var selectorsArray = [];
 
     for (var prop in configList) {
 
-        // // If there is another selector in configList, add it to selector array
-        // if (typeof configList[prop].selector !== 'undefined') {
-        //     selectors.push(configList[prop].selector);
-        // }
-
-        var selectorsArray = [configList[prop].selector];
-        selectorsArray.push(DEFAULT_SELECTORS);
-        selectorsArray = [].concat.apply([], selectorsArray);
+        //Conditional to prevent error when only default selectors are being used.
+        if (configList[prop].selector == undefined){
+            selectorsArray = DEFAULT_SELECTORS;
+        } else {
+            selectorsArray = [configList[prop].selector];
+            selectorsArray.push(DEFAULT_SELECTORS);
+            selectorsArray = [].concat.apply([], selectorsArray);
+        }
 
         var hideSelectorsArray = [configList[prop].hide];
         hideSelectorsArray = [].concat.apply([], hideSelectorsArray);

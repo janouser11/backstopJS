@@ -23,7 +23,7 @@ var BASE_URL = baseUrl.qa;
 
 //Selectors that are selected for every test, can leave empty or add multiple selectors such as:
 // var DEFAULT_SELECTORS = ["selector1","selector2"]
-var DEFAULT_SELECTORS = ["header"];
+var DEFAULT_SELECTORS = ["document"];
 
 
 /**
@@ -31,18 +31,21 @@ var DEFAULT_SELECTORS = ["header"];
  * Example config object in configList
  * Only need url page to test. By default a screenshot of the whole page is taken
  * Custom properties can be taken as well
-        {
-           url: "URL_PAGE",                    //Target URL goes here
-           hide: "selector",                   //Selector content that is hidden
-           remove: "selector",                 //Selectors that will be removed
-           selector:"selector"                 //Additional selectors for testing for specific URL -- can have multiple
-        }
+ {
+    url: "URL_PAGE",                    //Target URL goes here
+    hide: "selector",                   //Selector content that is hidden
+    remove: "selector",                 //Selectors that will be removed
+    selector:"selector"                 //Additional selectors for testing for specific URL -- can have multiple
+ }
  *
  */
 
 
 var configList = [{
     url: "about",
+    hide: [
+        "#global-content > div.generic-header > div"
+    ],
     selector:[
         "document",
         "#global-content > div.generic-header > div > div",
@@ -87,8 +90,9 @@ console.log("****************");
 //Function to reduce redundancy and make code easier to read and manage
 //These are suggested default configs that can be overwritten by configList array
 function loopThroughUrlArray() {
+
     var scenarios = [];
-    // var selectors = [];
+
     for (var prop in configList) {
 
         // // If there is another selector in configList, add it to selector array
@@ -97,6 +101,7 @@ function loopThroughUrlArray() {
         // }
 
         var selectorsArray = [configList[prop].selector];
+        selectorsArray.push(DEFAULT_SELECTORS);
         selectorsArray = [].concat.apply([], selectorsArray);
 
         var hideSelectorsArray = [configList[prop].hide];
@@ -121,11 +126,9 @@ function loopThroughUrlArray() {
         };
 
         scenarios.push(scenario);
-         array = [];
-        console.log("remove selectors are:");
-        console.log([configList[prop].remove]);
-        console.log("selectors are:");
-        console.log([configList[prop].selector]);
+        selectorsArray = [];
+        hideSelectorsArray = [];
+        removeSelectorsArray = [];
         provideLogging(BASE_URL+configList[prop].url,configList[prop].hide,
             configList[prop].remove/*,BASE_REFERENCE_URL+configList[prop].url*/);
     }

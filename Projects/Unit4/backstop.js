@@ -10,6 +10,7 @@
 var baseUrl = {
     acct: "http://www.unit4.acct.us.onehippo.com/",
     prod: "http://www.unit4.com/"
+
 };
 
 //Change testing Environment here by changing baseUrl suffix
@@ -21,7 +22,7 @@ var BASE_REFERENCE_URL = baseUrl.prod;
 
 //Selectors that are selected for every test, can leave empty or add multiple selectors such as:
 // var DEFAULT_SELECTORS = ["selector1","selector2"]
-var DEFAULT_SELECTORS = ["document"];
+var DEFAULT_SELECTORS = ["header", "#main", "footer"];
 
 
 /**
@@ -29,20 +30,80 @@ var DEFAULT_SELECTORS = ["document"];
  * Example config object in configList
  * Only need url page to test. By default a screenshot of the whole page is taken
  * Custom properties can be taken as well
-        {
-           url: "URL_PAGE",                    //Target URL goes here
-           hide: "selector",                   //Selector content that is hidden
-           remove: "selector",                 //Selectors that will be removed
-           selector:"selector"                 //Additional selectors for testing for specific URL -- can have multiple
-        }
+ {
+    url: "URL_PAGE",                    //Target URL goes here
+    hide: "selector",                   //Selector content that is hidden
+    remove: "selector",                 //Selectors that will be removed
+    selector:"selector"                 //Additional selectors for testing for specific URL -- can have multiple
+ }
  *
  */
 
 
 var configList = [{
     url: "your-rules#why-unit4",
-    hide: "#main > div > div:nth-child(1) > div.row.homecarousel",
-    selector: ["header,#main,footer"]
+    hide: "#main > div > div:nth-child(1) > div.row.homecarousel"
+},{
+    url: "applications/erp",
+    hide: "#main > div > div:nth-child(1) > div.row.homecarousel"
+
+},{
+    url: "applications/cfo",
+    hide: "#main > div > div:nth-child(1) > div.row.homecarousel"
+},{
+    url: "applications/hr"
+},{
+    url: "applications/more/regional-products",
+    hide: "#main div div div.row.homecarousel"
+},{
+    url: "applications/sector-solutions",
+    hide: "#main div div div.row.homecarousel"
+},{
+    url: "sectors/professional-services"
+},{
+    url: "sectors/public-services"
+},{
+    url: "sectors/education"
+},{
+    url: "sectors/ngos-and-not-for-profit"
+},{
+    url: "sectors/wholesale"
+},{
+    url: "sectors/real-estate"
+},{
+    url: "sectors/additional-sectors"
+},{
+    url: "customer-service/key-services"
+},{
+    url: "customer-service/support"
+},{
+    url: "customer-service/unit4-ideas"
+},{
+    url: "about/our-company"
+},{
+    url: "about/awards"
+},{
+    url: "about/news"
+},{
+    url: "about/management-team"
+},{
+    url: "blog"
+},{
+    url: "about/management-team"
+},{
+    url: "about/partners"
+},{
+    url: "about/events"
+},{
+    url: "about/ethics"
+},{
+    url: "about/social-media-directory"
+},{
+    url: "about/faq"
+},{
+    url: "contact"
+},{
+    url: "about/news/archive"
 }];
 
 
@@ -71,37 +132,56 @@ if (BASE_URL == undefined) {
 } else {
     console.log("BASE_URL is: " + BASE_URL);
 }
+
+if (DEFAULT_SELECTORS != undefined){
+    console.log("DEFAULT_SELECTORS ARE: ")
+    console.log(DEFAULT_SELECTORS)
+}
+
 console.log("****************");
 
 //Function to reduce redundancy and make code easier to read and manage
 //These are suggested default configs that can be overwritten by configList array
 function loopThroughUrlArray() {
+
     var scenarios = [];
-    var selectors = DEFAULT_SELECTORS;
+    var selectorsArray = [];
     for (var prop in configList) {
 
-        //If there is another selector in configList, add it to selector array
-        if (typeof configList[prop].selector !== 'undefined') {
-            selectors.push(configList[prop].selector);
+        //Conditional to prevent error when only default selectors are being used.
+        if (configList[prop].selector == undefined){
+            selectorsArray = DEFAULT_SELECTORS;
+        } else {
+            selectorsArray = [configList[prop].selector];
+            selectorsArray.push(DEFAULT_SELECTORS);
+            selectorsArray = [].concat.apply([], selectorsArray);
         }
+        //Concating allows the merge of two arrays into one
+        var hideSelectorsArray = [configList[prop].hide];
+        hideSelectorsArray = [].concat.apply([], hideSelectorsArray);
+
+        var removeSelectorsArray = [configList[prop].remove];
+        removeSelectorsArray = [].concat.apply([], removeSelectorsArray);
+
         var scenario = {
             "label": BASE_URL + configList[prop].url,
             "url": BASE_URL + configList[prop].url,
             //reference URL can be enabled that tests url against referenceUrl
             "referenceUrl": BASE_REFERENCE_URL + configList[prop].url,
-            "hideSelectors": [configList[prop].hide],
-            "removeSelectors": [configList[prop].remove],
-            "selectors": selectors,
+            "hideSelectors": hideSelectorsArray,
+            "removeSelectors": removeSelectorsArray,
+            "selectors":  selectorsArray,
             "readyEvent": null,
             "delay": 500,
             "misMatchThreshold": 0.1,
             "onBeforeScript": "onBefore.js",
             "onReadyScript": "onReady.js"
         };
-        console.log("selectors are: " + selectors);
 
         scenarios.push(scenario);
-        selectors = [];
+        selectorsArray = [];
+        hideSelectorsArray = [];
+        removeSelectorsArray = [];
         provideLogging(BASE_URL+configList[prop].url,configList[prop].hide,
             configList[prop].remove/*,BASE_REFERENCE_URL+configList[prop].url*/);
     }
