@@ -1,7 +1,8 @@
 # backstopJS
 
 ##Quick Start
-Anywhere in directory, to run references use the command:
+These commands can be ran from any directory, however you still need full path to file that is being tested
+##To run reference
 
 ```npm run reference -- --configPath=PathToJsFile.js```
 
