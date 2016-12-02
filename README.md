@@ -5,16 +5,18 @@ Documentation: https://github.com/garris/BackstopJS
 ##Quick Start
 These commands can be ran from any directory, however, the full path is needed to the file that is being tested.
 
-If refering to BackstopJS documention, the installation and usage commands can be ignored. Use only the commands below.
+If refering to BackstopJS documention, the installation and usage commands can be ignored. Use only the commands below for this project.
 ##To run reference
 Reference creates a directory of screenshots that you want to use as your reference.
+
 ```npm run reference -- --configPath=PathToJsFile.js```
 
 ####example:
 ```npm run reference -- --configPath=Projects/Unit4/backstop.js```
 
 ##To run tests:
-Test takes a new set of screenshots and compares against reference. If browser report is enable (it is by default) then a report will be generated showing results of comparison. 
+Test takes a new set of screenshots and compares against reference. If browser report is enabled (it is by default) then a report will be generated showing results of comparison. 
+
 ```npm run test -- --configPath=PathToJsFile.js```
 ####example:
 ```npm run test -- --configPath=Projects/Unit4/backstop.js```
