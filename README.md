@@ -18,7 +18,7 @@ These commands can be ran from any directory, however you still need full path t
 ##Changing paths
 When making a new project folder, the paths in backstop.js need to be changed to match target directory
 ###example:
-```"paths": {
+```json"paths": {
            "bitmaps_reference": "./Projects/Unit4/backstop_data/bitmaps_reference",
            "bitmaps_test": "./Projects/Unit4/backstop_data/bitmaps_test",
            "casper_scripts": "./Projects/Unit4/backstop_data/casper_scripts",
