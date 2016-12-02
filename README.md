@@ -1,5 +1,5 @@
 # backstopJS
-Required: https://www.npmjs.com/
+Required: https://www.npmjs.com/_
 Documentation: https://github.com/garris/BackstopJS
 ##Quick Start
 These commands can be ran from any directory, however you still need full path to file that is being tested
