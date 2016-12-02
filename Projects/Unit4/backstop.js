@@ -47,7 +47,7 @@ var configList = [{
     url: "applications/erp",
     hide: "#main > div > div:nth-child(1) > div.row.homecarousel"
 
-},{
+ },{
     url: "applications/cfo",
     hide: "#main > div > div:nth-child(1) > div.row.homecarousel"
 },{
@@ -218,15 +218,20 @@ var exporting = { "id": "prod_test",
         loopThroughUrlArray(),
 
     "paths": {
-        "bitmaps_reference": "backstop_data/bitmaps_reference",
-        "bitmaps_test": "backstop_data/bitmaps_test",
-        "casper_scripts": "backstop_data/casper_scripts",
-        "html_report": "backstop_data/html_report",
-        "ci_report": "backstop_data/ci_report"
+        "bitmaps_reference": "./Projects/Unit4/backstop_data/bitmaps_reference",
+        "bitmaps_test": "./Projects/Unit4/backstop_data/bitmaps_test",
+        "casper_scripts": "./Projects/Unit4/backstop_data/casper_scripts",
+        "html_report": "./Projects/Unit4/backstop_data/html_report",
+        "ci_report": "./Projects/Unit4/backstop_data/ci_report"
+    },
+    "ci": {
+        "format" :  "junit" ,
+        "testReportFileName": "myproject-xunit", // in case if you want to override the default filename (xunit.xml)
+        "testSuiteName" :  "backstopJS"
     },
     "casperFlags": [],
     "engine": "phantomjs",
-    "report": ["browser"],
+    "report": ["browser","CI"],
     "debug": false
 };
 
