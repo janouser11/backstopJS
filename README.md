@@ -1,4 +1,5 @@
-![alt text](https://beauthentic.digital/webfiles/1478663747187/authxusen/site/images/favicon/favicon.ico)       # backstopJS
+# backstopJS ![alt text](https://beauthentic.digital/webfiles/1478663747187/authxusen/site/images/favicon/favicon.ico)       
+
 
 Required: https://www.npmjs.com/ or https://github.com/creationix/nvm
 
