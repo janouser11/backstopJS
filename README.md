@@ -3,6 +3,10 @@ Required: https://www.npmjs.com/
 
 Documentation: https://github.com/garris/BackstopJS
 ##Quick Start
+Install by running:
+```git clone https://github.com/garris/BackstopJS.git```
+in the directory of your choice. 
+
 These commands can be ran from any directory, however, the full path is needed to the file that is being tested.
 
 If refering to BackstopJS documention, the installation and usage commands can be ignored. Use only the commands below for this project.
