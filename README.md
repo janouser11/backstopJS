@@ -1,7 +1,6 @@
-# backstopJS ![alt text](https://beauthentic.digital/webfiles/1478663747187/authxusen/site/images/favicon/favicon.ico)       
+# backstopJS 
 
-
-Required: https://www.npmjs.com/ or https://github.com/creationix/nvm
+Required: https://github.com/creationix/nvm or https://www.npmjs.com/
 
 Documentation: https://github.com/garris/BackstopJS
 ##Quick Start
@@ -10,17 +9,19 @@ Install by running:
 in the directory of your choice. 
 
 #####If using *npm*
-First run ```npm install``` to install any dependencies in node_modules folder
+Run ```npm install``` to install node_modules. 
 
 #####If using *nvm* 
 Navigate (```cd backstopJS```) into the root of the project and run ```nvm use``` and then ```npm install```.
-These commands can be ran from any directory, however, the full path is needed to the file that is being tested.
 
 If refering to BackstopJS documention, the installation and usage commands can be ignored. Use only the commands below for this project.
 ##To run reference
 Reference creates a directory of screenshots that you want to use as your reference.
 
 ```npm run reference -- --configPath=PathToJsFile.js```
+
+These commands can be ran from any directory, however, the full path is needed to the file that is being used.
+
 
 ####example:
 ```npm run reference -- --configPath=Projects/Unit4/backstop.js```
