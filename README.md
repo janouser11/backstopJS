@@ -1,3 +1,4 @@
+![alt text](https://beauthentic.digital/webfiles/1478663747187/authxusen/site/images/favicon/favicon.ico)
 # backstopJS
 Required: https://www.npmjs.com/ or https://github.com/creationix/nvm
 
@@ -7,11 +8,11 @@ Install by running:
 ```git clone https://github.com/garris/BackstopJS.git```
 in the directory of your choice. 
 
-#####If using npm
+#####If using *npm*
 First run ```npm install``` to install any dependencies in node_modules folder
 
-####If using nvm
-
+#####If using *nvm* 
+Navigate (```cd backstopJS```) into the root of the project and run ```nvm use``` and then ```npm install```.
 These commands can be ran from any directory, however, the full path is needed to the file that is being tested.
 
 If refering to BackstopJS documention, the installation and usage commands can be ignored. Use only the commands below for this project.
