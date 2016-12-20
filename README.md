@@ -20,7 +20,7 @@ Reference creates a directory of screenshots that you want to use as your refere
 
 ```npm run reference -- --configPath=PathToJsFile.js```
 
-These commands can be ran from any directory, however, the full path is needed to the file that is being used.
+These commands can be ran from any directory. However, the full path is needed to the file that is being used.
 
 
 ####example:
