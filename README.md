@@ -1,11 +1,16 @@
 # backstopJS
-Required: https://www.npmjs.com/
+Required: https://www.npmjs.com/ or https://github.com/creationix/nvm
 
 Documentation: https://github.com/garris/BackstopJS
 ##Quick Start
 Install by running:
 ```git clone https://github.com/garris/BackstopJS.git```
 in the directory of your choice. 
+
+#####If using npm
+First run ```npm install``` to install any dependencies in node_modules folder
+
+####If using nvm
 
 These commands can be ran from any directory, however, the full path is needed to the file that is being tested.
 
