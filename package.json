@@ -6,7 +6,9 @@
   "dependencies": {
     "backstopjs": "^2.3.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "slimerjs": "^0.10.2"
+  },
   "scripts": {
     "reference": "node ./node_modules/backstopjs/cli/index.js reference",
     "test": "node ./node_modules/backstopjs/cli/index.js test"
