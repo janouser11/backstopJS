@@ -1,5 +1,6 @@
 #IntelliJ Configs
 .idea/
+.idea/misc.xml
 backstopJS.iml
 
 #Generated data
@@ -18,3 +19,5 @@ node_modules/backstopjs/capture/config.json
 
 
 npm-debug.log
+node_modules/backstopjs/node_modules/.bin/slimerjs
+node_modules/backstopjs/node_modules/slimerjs/
