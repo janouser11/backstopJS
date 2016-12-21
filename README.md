@@ -1,6 +1,6 @@
 # backstopJS 
 
-Required: https://github.com/creationix/nvm or https://www.npmjs.com/
+Required: https://github.com/creationix/nvm (recommended) or https://www.npmjs.com/
 
 Documentation: https://github.com/garris/BackstopJS
 ##Quick Start
