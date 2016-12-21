@@ -1,21 +1,19 @@
 # backstopJS 
 
-#####Required
+#####Required:
 https://github.com/creationix/nvm (recommended) or https://www.npmjs.com/
 
-To install nvm quickly, run in your terminal:
+To install **nvm**, run in your terminal:
 
  ```curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash```
- 
-/play sexyback
 
-Documentation: https://github.com/garris/BackstopJS
+In-Depth documentation on using backstop: https://github.com/garris/BackstopJS
 ##Quick Start
 Install by running:
 ```git clone https://github.com/garris/BackstopJS.git```
 in the directory of your choice. 
 
-#####If using *npm*
+#####If using *npm* already
 Run ```npm install``` to install node_modules. 
 
 #####If using *nvm* 
@@ -40,14 +38,14 @@ Test takes a new set of screenshots and compares against reference. If browser r
 ####example:
 ```npm run test -- --configPath=Projects/Unit4/AccVsProd/Mobile/testMobile.js```
 
-##Changing paths
-When making a new project folder, the paths in backstop.js need to be changed to match target directory
-####example:
-```json
-"paths": {
-           "bitmaps_reference": "./Projects/Unit4/backstop_data/bitmaps_reference",
-           "bitmaps_test": "./Projects/Unit4/backstop_data/bitmaps_test",
-           "casper_scripts": "./Projects/Unit4/backstop_data/casper_scripts",
-           "html_report": "./Projects/Unit4/backstop_data/html_report",
-           "ci_report": "./Projects/Unit4/backstop_data/ci_report"
-       }
+##Getting Started
+Navigate to your project folder inside of ```backstopJS/Projects```.  If your project is not in ```Projects```, create a new one with your project name.  
+
+
+If its a new folder copy everything inside of ```backstopJS/Projects/Prototype``` into your project folder.  (This includes a backstop_data folder and backstop.js file)
+
+Use the new ```backstop.js``` file as a template to begin customizing your project in ```backstopJs/Projects/ProjectName/backstop.js```
+
+For guidance, refer to other projects to see different implementations. 
+
+
