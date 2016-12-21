@@ -42,7 +42,7 @@ Test takes a new set of screenshots and compares against reference. If browser r
 Navigate to your project folder inside of ```backstopJS/Projects```.  If your project is not in ```Projects```, create a new one with your project name.  
 
 
-If its a new folder copy everything inside of ```backstopJS/Projects/Prototype``` into your project folder.  (This includes a backstop_data folder and backstop.js file)
+After creating new folder, copy everything inside of ```backstopJS/Projects/Prototype``` into your project folder.  (This includes a backstop_data folder and backstop.js file)
 
 Use the new ```backstop.js``` file as a template to begin customizing your project in ```backstopJs/Projects/ProjectName/backstop.js```
 
