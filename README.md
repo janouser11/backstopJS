@@ -1,6 +1,13 @@
 # backstopJS 
 
-Required: https://github.com/creationix/nvm (recommended) or https://www.npmjs.com/
+#####Required
+https://github.com/creationix/nvm (recommended) or https://www.npmjs.com/
+
+To install nvm quickly, run in your terminal:
+
+ ```curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash```
+ 
+/play sexyback
 
 Documentation: https://github.com/garris/BackstopJS
 ##Quick Start
@@ -12,7 +19,7 @@ in the directory of your choice.
 Run ```npm install``` to install node_modules. 
 
 #####If using *nvm* 
-Navigate (```cd backstopJS```) into the root of the project and run ```nvm use``` and then ```npm install```.
+Navigate (```cd backstopJS```) into the root of the project and run ```nvm use 5.9``` and then ```npm install```.
 
 If refering to BackstopJS documention, the installation and usage commands can be ignored. Use only the commands below for this project.
 ##To run reference
@@ -24,14 +31,14 @@ These commands can be ran from any directory. However, the full path is needed t
 
 
 ####example:
-```npm run reference -- --configPath=Projects/Unit4/backstop.js```
+```npm run reference -- --configPath=Projects/Unit4/AccVsProd/Desktop/testDesktop.js```
 
 ##To run tests:
 Test takes a new set of screenshots and compares against reference. If browser report is enabled (it is by default) then a report will be generated showing results of comparison. 
 
 ```npm run test -- --configPath=PathToJsFile.js```
 ####example:
-```npm run test -- --configPath=Projects/Unit4/backstop.js```
+```npm run test -- --configPath=Projects/Unit4/AccVsProd/Mobile/testMobile.js```
 
 ##Changing paths
 When making a new project folder, the paths in backstop.js need to be changed to match target directory

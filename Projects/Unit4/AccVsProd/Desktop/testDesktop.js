@@ -89,6 +89,49 @@ var configList = [
     {
         url: "customer-service/key-services",
         remove: "#main > div > div:nth-child(1) > div.row > ul"
+    },
+    {
+        url: "customer-service/support",
+        remove: ["#main > div:nth-child(1) > div:nth-child(1) > div.row > ul","#div.grid.article-cols.article-four-col > div:nth-child(2) > p:nth-child(2) > div"]
+    }, {
+        url: "customer-service/unit4-ideas",
+        remove: ["#main > div > div:nth-child(1) > div.row > ul","#main > div > div:nth-child(2) > div > div > div.col-5 > div"]
+    }, {
+        url: "about/our-company",
+        remove: ["#main > div > div:nth-child(1) > div.row > ul","#main > div > div:nth-child(2) > div:nth-child(3) > div.grid > div > div > div:nth-child(2) > p > div"]
+    }, {
+        url: "about/awards",
+        remove: ["#main > div > div:nth-child(1) > div.row > ul","#main > div > div:nth-child(3) > div.row.bg-grey > div.grid > div.col-5 > div"]
+    }, {
+        url: "about/news",
+        remove: ["#main > div:nth-child(1) > div:nth-child(2) > div > div.background > div.col-8","body > div > div.timeline-Body.customisable-border > div.timeline-Viewport > ol > li:nth-child(4) > div"]
+    }, {
+        url: "about/management-team",
+        remove: "#main > div > div:nth-child(1) > div.row > ul"
+    }, {
+        url: "blog",
+        remove: "#main > div.bg-full-width > div > div > div > article.blog-item.featured"
+    }, {
+        url: "about/partners",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel","#main > div > div:nth-child(3) > div:nth-child(2) > div > div.col-5 > div","#main > div > div:nth-child(7) > div:nth-child(3) > div > div.col-5 > div"]
+    }, {
+        url: "about/events",
+        remove: "#main > div > div:nth-child(1) > div.row > div"
+    }, {
+        url: "about/ethics",
+        remove: "#main > div > div:nth-child(1) > div.row > ul"
+    }, {
+        url: "about/social-media-directory",
+        remove: "#main > div > div:nth-child(1) > div.row > ul"
+    }, {
+        url: "about/faq",
+        remove: "#main > div > div:nth-child(1) > div.row > ul"
+    }, {
+        url: "contact",
+        remove: "#office-locations-map",
+    }, {
+        url: "about/news/archive",
+        remove: "#main > div > div:nth-child(1) > div.row > ul"
     }
 
 ];
@@ -220,7 +263,7 @@ module.exports = exporting;
 
  example:
 
- npm run reference -- --configPath=Projects/Unit4/testDesktop1.js
+ npm run reference -- --configPath=Projects/Unit4/backstop.js
 
  To run tests:
 
@@ -228,4 +271,4 @@ module.exports = exporting;
 
  example:
 
- npm run reference -- --configPath=Projects/Unit4/testDesktop1.js*/
+ npm run reference -- --configPath=Projects/Unit4/backstop.js*/
