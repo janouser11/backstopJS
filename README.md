@@ -29,6 +29,17 @@ If a new folder is created, copy everything inside of ```backstopJS/Projects/Pro
 
 Use the new ```backstop.js``` file as a template to begin customizing your project in ```backstopJs/Projects/ProjectName/backstop.js```
 
+####Make sure you edit the paths at the bottom of the JS file to include the full path
+```json
+"paths": {
+        "bitmaps_reference": "Projects/Unit4/AccVsProd/Mobile/backstop_data/bitmaps_reference",
+        "bitmaps_test": "Projects/Unit4/AccVsProd/Mobile/backstop_data/bitmaps_test",
+        "casper_scripts": "Projects/Unit4/AccVsProd/Mobile/backstop_data/casper_scripts",
+        "html_report": "Projects/Unit4/AccVsProd/Mobile/backstop_data/html_report",
+        "ci_report": "Projects/Unit4/AccVsProd/Mobile/backstop_data/ci_report"
+    },
+```
+
 For guidance, refer to other projects to see different implementations. 
 ##To run reference
 Reference creates a directory of screenshots that you want to use as your reference.
