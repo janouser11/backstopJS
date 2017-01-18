@@ -46,7 +46,7 @@ Test takes a new set of screenshots and compares against reference. If browser r
 
 ```npm run test -- --configPath=PathToJsFile.js```
 ####example:
-```npm run test -- --configPath=Projects/Unit4/AccVsProd/Mobile/testMobile.js```
+```npm run test -- --configPath=Projects/Unit4/AccVsProd/Mobile/mobile.js```
 
 
 

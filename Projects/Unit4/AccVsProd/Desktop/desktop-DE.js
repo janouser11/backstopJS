@@ -4,8 +4,9 @@
 
 //Different base URL's based on environment
 var baseUrl = {
-    acct: "http://www.unit4.acct.us.onehippo.com/",
-    prod: "http://www.unit4.com/"
+    //test: "http://www.unit4.test.us.onehippo.com/de/",
+    acct:"http://www.unit4.acct.us.onehippo.com/de/",
+    prod: "http://www.unit4.com/de/"
 
 };
 
@@ -37,108 +38,123 @@ var DEFAULT_SELECTORS = ["header", "#main", "footer"];
 
 
 var configList = [
-    /*{   url: "",
-     remove:  ["#main > div > div:nth-child(1) > div.row.homecarousel","#main > div > div:nth-child(3) > div > div.row.tabs.mobile-expand > ul > li.tab-item.active > div","#player > div.video-wrapper > div > div > video"]
-     },*/
-    {
-        url: "your-rules#why-unit4",
-        remove:  ["#main > div > div:nth-child(1) > div.row.homecarousel","#tab-group-0-0 > div.col-5","#people-in-business---wsp---parsons-brinckerhoff > div > blockquote > h4 > em > p > div","#tab-group-0-0 > div.col-5 > img"]
-    },{
-        url: "applications/erp",
-        remove: ["#main > div > div:nth-child(1) > div.row.homecarousel","#main > div > div:nth-child(2) > div:nth-child(3) > div.grid > div.col-5 > div > img","#tab-group-0-0 > div.col-5 > img"]
+    {   url: "",
+        remove:  ["#main > div > div:nth-child(1) > div.row.homecarousel","#main > div > div:nth-child(3) > div > div.row.tabs.mobile-expand > ul > li.tab-item.active > div","#player > div.video-wrapper > div > div > video"]
+    },
+    {   url: "your-rules",
+        remove:  ["#main > div > div:nth-child(1) > div.row.homecarousel","#tab-group-0-0 > div.col-5"]
+    },
+    {   url: "/produkte/erp",
+        remove: ["#main > div > div:nth-child(1) > div.row.homecarousel"]
 
-    },{
-        url: "applications/cfo",
-        remove: ["#main > div > div:nth-child(1) > div.row","#main > div > div:nth-child(7) > div > div > div.col-8 > div > div","#pane1 > div.col-7 > div > div > div > div.slide.slick-slide.slick-current.slick-active > img"]
-    },{
-        url: "applications/hr",
-        remove: ["#main > div > div:nth-child(1) > div.row > div","#pane1 > div.col-7 > div > div > div > div.slide.slick-slide.slick-current.slick-active > img","#main > div > div:nth-child(13) > div > div > div.col-8 > div > div"]
-    },{
-        url: "applications/more/regional-products",
-        remove: "#main > div > div:nth-child(1) > div.row > ul"
-    },{
-        url: "applications/sector-solutions",
-        remove: ["#main > div > div:nth-child(1) > div.row > div"]
-    },{
-        url: "sectors/professional-services",
-        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel","#main > div > div:nth-child(5) > div.row.bg-grey > div.grid > div.col-5 > div","#player > div.video-wrapper"]
-    },{
-        url: "sectors/public-services",
-        remove: ["#main > div > div:nth-child(1) > div.row.homecarousel > div","#main > div > div:nth-child(3) > div.row.bg-grey > div.grid > div.col-5 > div > iframe","#main > div > div:nth-child(9) > div:nth-child(3) > div.grid > div.col-5 > div"]
-    },{
-        url: "sectors/education",
-        remove: ["#main > div > div:nth-child(1) > div.row.homecarousel > div","#main > div > div:nth-child(3) > div.row.bg-grey > div.grid > div.col-5 > div","#main > div > div:nth-child(4) > div:nth-child(3) > div > div.col-5 > div"]
-    },{
-        url: "sectors/ngos-and-not-for-profit",
-        remove: ["#main > div > div:nth-child(1) > div.row.homecarousel > div","#main > div > div:nth-child(3) > div.row.bg-grey > div.grid > div.col-5 > div","#main > div > div:nth-child(12) > div.row.bg-grey > div.grid > div.col-5 > div"]
-    },{
-        url: "sectors/wholesale",
-        remove: ["#main div div div.row.homecarousel","#main > div > div:nth-child(3) > div.row.bg-grey > div.grid > div.col-5 > div","#main > div > div:nth-child(9) > div:nth-child(3) > div.grid > div.col-5 > div"]
-    },{
-        url: "sectors/real-estate",
-        remove: ["#main div div div.row.homecarousel","#main > div > div:nth-child(3) > div.row.bg-grey > div.grid > div.col-5 > div","#main > div > div:nth-child(8) > div:nth-child(3) > div.grid > div.col-5 > div"]
+    },
+    {   url: "produkte/cfo"
     },
     {
-        url: "sectors/additional-sectors",
+        url: "produkte/hr"
+    },
+    {   url: "produkte/branchenanwendung"
+    },
+    {   url: "branchen/dienstleister"
+    },
+    {   url: "branchen/public",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "branchen/hochschule",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "branchen/handel",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "branchen/npo",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "services/software",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "services/schulungen",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "services/beratung",
         remove: "#main > div > div:nth-child(1) > div.row > ul"
     },
-    {
-        url: "/customer-service/expert-software-services",
+    {   url: "services/support",
         remove: "#main > div > div:nth-child(1) > div.row > ul"
     },
-    {
-        url: "customer-service/key-services",
+    {   url: "services/unit4-ideas",
         remove: "#main > div > div:nth-child(1) > div.row > ul"
     },
-    {
-        url: "customer-service/support",
-        remove: ["#main > div:nth-child(1) > div:nth-child(1) > div.row > ul","#div.grid.article-cols.article-four-col > div:nth-child(2) > p:nth-child(2) > div"]
+    {   url: "services/software-updates",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "ueber/unternehmen",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "ueber/auszeichnungen",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "ueber/news",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "ueber/management",
+        remove: ["#main > div > div:nth-child(1) > div.row > ul > li > div"]
     }, {
-        url: "customer-service/unit4-ideas",
-        remove: ["#main > div > div:nth-child(1) > div.row > ul","#main > div > div:nth-child(2) > div > div > div.col-5 > div"]
-    }, {
-        url: "about/our-company",
-        remove: ["#main > div > div:nth-child(1) > div.row > ul","#main > div > div:nth-child(2) > div:nth-child(3) > div.grid > div > div > div:nth-child(2) > p > div"]
-    }, {
-        url: "about/awards",
-        remove: ["#main > div > div:nth-child(1) > div.row > ul","#main > div > div:nth-child(3) > div.row.bg-grey > div.grid > div.col-5 > div"]
-    }, {
-        url: "about/news",
-        remove: ["#main > div:nth-child(1) > div:nth-child(2) > div > div.background > div.col-8","body > div > div.timeline-Body.customisable-border > div.timeline-Viewport > ol > li:nth-child(4) > div"]
-    }, {
-        url: "about/management-team",
+        url: "partner",
         remove: "#main > div > div:nth-child(1) > div.row > ul"
-    }, {
-        url: "blog",
+    },
+    {   url: "partner/ecosystem",
         remove: "#main > div.bg-full-width > div > div > div > article.blog-item.featured"
-    }, {
-        url: "about/partners",
-        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel","#main > div > div:nth-child(3) > div:nth-child(2) > div > div.col-5 > div","#main > div > div:nth-child(7) > div:nth-child(3) > div > div.col-5 > div"]
-    }, {
-        url: "about/events",
-        remove: "#main > div > div:nth-child(1) > div.row > div"
-    }, {
-        url: "about/ethics",
+    },
+    {   url: "ueber/veranstaltungen",
+        remove: ["#main > div > div:nth-child(2) > div.row.homecarousel"]
+    },
+    {   url: "kontakt"
+    },
+    {   url: "blog"
+    },
+    {   url: "produkte/cloud-at-your-speed"
+    },
+    {   url: "your-rules#time-change",
         remove: "#main > div > div:nth-child(1) > div.row > ul"
     }, {
-        url: "about/social-media-directory",
+        url: "produkte/erp/business-world"
+    },
+    {   url: "produkte/erp/business-world-pro-fiskal"
+    },
+    //Additional cases
+    {   url: "produkte/cfo/account-analysis"
+    },
+    {   url: "produkte/cfo/audit-control"
+    },
+    {   url: "produkte/cfo/business-world-financials"
+    },
+    {   url: "produkte/cfo/cash-flow-planning"
+    },
+    {   url: "produkte/cfo/consolidation"
+    },
+    {   url: "produkte/cfo/financials"
+    },
+    {   url: "produkte/hr/absence-manager",
         remove: "#main > div > div:nth-child(1) > div.row > ul"
-    }, {
-        url: "about/faq",
-        remove: "#main > div > div:nth-child(1) > div.row > ul"
-    }, {
-        url: "contact",
-        remove: "#office-locations-map",
-    }, {
-        url: "about/news/archive",
-        remove: "#main > div > div:nth-child(1) > div.row > ul"
+    },
+    {   url: "produkte/hr/human-resources-and-payroll"
+    },
+    {   url: "produkte/hr/people-planning"
+    },
+    {   url: "produkte/hr/travel-and-expenses"
+    },
+    {   url: "produkte/branchenanwendung/research-management"
+    },
+    {   url: "produkte/branchenanwendung/student-management"
+    },
+    {   url: "produkte/branchenloesungen/psa"
+    },
+    {   url: "erechnung"
     }
-
 ];
 
-
 /**
- *
+
 
  * Do not edit anything below these comments
  * Only the above code needs to be changed
@@ -229,12 +245,12 @@ function provideLogging(url,hide,remove,referenceUrl){
 }
 
 //JSON object that is being exported for Backstop
-var exporting = { "id": "testmobile01",
+var exporting = { "id": "testdesktop-de",
     "viewports": [
         {
-            "name": "mobile",
-            "width": 414,
-            "height": 736
+            "name": "desktop",
+            "width": 1440,
+            "height": 900
         }
     ],
     "scenarios":
