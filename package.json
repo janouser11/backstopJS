@@ -4,7 +4,7 @@
   "description": "",
   "main": "backstop.js",
   "dependencies": {
-    "backstopjs": "^2.3.3"
+    "backstopjs": "~2.3.3"
   },
   "devDependencies": {
     "slimerjs": "^0.10.2"

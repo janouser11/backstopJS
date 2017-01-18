@@ -9,8 +9,7 @@ To install **nvm**, run in your terminal:
 
 In-Depth documentation on using backstop: https://github.com/garris/BackstopJS
 ##Install
-Install by running:
-```git clone https://github.com/garris/BackstopJS.git```
+Install by clicking the download button either by zip or `git clone urlGoesHere`
 in the directory of your choice. 
 
 #####If using *npm* already
@@ -24,6 +23,7 @@ If referring to BackstopJS documentation, the installation and usage commands ca
 ##Getting Started
 If your project is not in ```Projects```, create a new one with your project name.  
 
+If you already have a project you can skip forward to the next section. 
 
 If a new folder is created, copy everything inside of ```backstopJS/Projects/Prototype``` into your project folder.  (This includes a backstop_data folder and backstop.js file)
 

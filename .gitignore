@@ -15,3 +15,5 @@ node_modules/backstopjs/capture/config.json
 
 npm-debug.log
 
+/node_modules/
+/backstopJS.iml
