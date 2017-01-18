@@ -290,7 +290,7 @@ var exporting = { "id": "testmobile01",
         loopThroughUrlArray(),
 
     "paths": {
-        "bitmaps_reference": "Projects/Unit4/AccVsProd/Mobile/backstop_data/bitmaps_reference",
+        "bitmaps_reference": "Projects/Unit4/AccVsProd/Mobile/backstop_data2/bitmaps_reference",
         "bitmaps_test": "Projects/Unit4/AccVsProd/Mobile/backstop_data/bitmaps_test",
         "casper_scripts": "Projects/Unit4/AccVsProd/Mobile/backstop_data/casper_scripts",
         "html_report": "Projects/Unit4/AccVsProd/Mobile/backstop_data/html_report",
