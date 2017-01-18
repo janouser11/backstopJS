@@ -19,13 +19,13 @@ Run ```npm install``` to install node_modules.
 #####If using *nvm* 
 Navigate (```cd backstopJS```) into the root of the project and run ```nvm use 5.9``` and then ```npm install```.
 
-If refering to BackstopJS documention, the installation and usage commands can be ignored. Use only the commands below for this project.
+If referring to BackstopJS documentation, the installation and usage commands can be ignored. Use only the commands below for this project.
 
 ##Getting Started
-Navigate to your project folder inside of ```backstopJS/Projects```.  If your project is not in ```Projects```, create a new one with your project name.  
+If your project is not in ```Projects```, create a new one with your project name.  
 
 
-After creating new folder, copy everything inside of ```backstopJS/Projects/Prototype``` into your project folder.  (This includes a backstop_data folder and backstop.js file)
+If a new folder is created, copy everything inside of ```backstopJS/Projects/Prototype``` into your project folder.  (This includes a backstop_data folder and backstop.js file)
 
 Use the new ```backstop.js``` file as a template to begin customizing your project in ```backstopJs/Projects/ProjectName/backstop.js```
 
@@ -42,7 +42,7 @@ These commands can be ran from any directory. However, the full path is needed t
 ```npm run reference -- --configPath=Projects/Unit4/AccVsProd/Desktop/testDesktop.js```
 
 ##To run test:
-Test takes a new set of screenshots and compares against reference. If browser report is enabled (it is by default) then a report will be generated showing results of comparison. 
+Test takes a new set of screen-shots and compares against reference. If browser report is enabled (it is by default) then a report will be generated showing results of comparison. 
 
 ```npm run test -- --configPath=PathToJsFile.js```
 ####example:

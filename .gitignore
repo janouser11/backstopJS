@@ -4,8 +4,9 @@
 backstopJS.iml
 
 #Generated data
-/backstop_data
-!/backstop_data/casper_scripts
+**/bitmaps_reference
+**/bitmaps_test
+**/html_report
 
 
 #Generated json file
